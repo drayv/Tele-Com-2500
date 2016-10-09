@@ -1,0 +1,30 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Maksym Shchyhol" />
+    <meta name="description" content="TeleCom" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Tele-Com</title>
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    @Styles.Render("~/Content/css")
+</head>
+<body ng-app="teleCom">
+    <div class="ui stackable inverted menu">
+        <div class="ui container">
+            <a id="logo-menu-item" href="/" class="header item">
+                <img class="logo" src="~/Content/Assets/telecom.png" alt="">
+                Tele-Com
+            </a>
+            <a id="services-menu-item" href="#/services" class="teal item">Телекомуникационные работы</a>
+        </div>
+    </div>
+    <div class="ui main container">
+        <ng-view></ng-view>
+    </div>
+    @Scripts.Render("~/Scripts/libraries")
+    @Scripts.Render("~/angular")
+    @Scripts.Render("~/Scripts/semantic")
+</body>
+</html>

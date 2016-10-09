@@ -1,0 +1,49 @@
+﻿.ui.menu .item img.logo {
+    margin-right: 0.4em !important;
+}
+
+.main.container {
+    margin-top: 1em;
+}
+
+.ui.stackable.menu {
+    -ms-border-radius: 0;
+    border-radius: 0;
+}
+
+@media only screen and (max-width: 650px) {
+    .ui.stackable.menu {
+        width: 104%;
+    }
+}
+
+#search {
+    margin-top: 10px;
+}
+
+.icons-th {
+    width: 80px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+#space {
+    padding-bottom: 20px;
+}
+
+#addNomenclatureInRequest {
+    margin-top: 10px;
+}
+
+#nomenclatureInRequestDiv {
+    width: 350px;
+    margin-right: 10px;
+}

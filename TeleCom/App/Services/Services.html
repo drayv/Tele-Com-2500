@@ -1,0 +1,41 @@
+﻿<div>
+    <button class="positive medium ui button" ng-click="createNewService()">Добавить</button>
+    <div class="ui small icon input">
+        <input id="search" type="text" ng-model="query" ng-change="search()" placeholder="Поиск">
+        <i class="search icon"></i>
+    </div>
+</div>
+<table class="ui celled table" ng-cloak>
+    <thead>
+        <tr>
+            <th>Номер</th>
+            <th>Наименование</th>
+            <th class="icons-th"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="service in filteredItems | startFrom: startingItem() | limitTo: itemsPerPage">
+            <td>{{service.Id}}</td>
+            <td>{{services.Name}}</td>
+            <td>
+                <a href="" ng-click="editService(service.Id)"><i class="edit icon"></i></a>|
+                <a href="" ng-click="deleteService(service.Id)"><i class="remove circle icon"></i></a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="3">
+                <div class="ui right floated pagination menu">
+                    <a ng-click="prevPage()" class="icon item">
+                        <i class="left chevron icon"></i>
+                    </a>
+                    <a class="item" ng-disabled="true">{{currentPage+1}} из {{numberOfPages()}}</a>
+                    <a ng-click="nextPage()" class="icon item">
+                        <i class="right chevron icon"></i>
+                    </a>
+                </div>
+            </th>
+        </tr>
+    </tfoot>
+</table>
