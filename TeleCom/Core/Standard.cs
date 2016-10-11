@@ -4,6 +4,6 @@
     {
         public string Name { get; set; }
         public string Value { get; set; }
-        public int Service { get; set; }
+        public Service Service { get; set; }
     }
 }

@@ -113,6 +113,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\Rates\AddRate.html" />
+    <Content Include="App\Rates\EditRate.html" />
+    <Content Include="App\Rates\Rates.html" />
+    <Content Include="App\Rates\Rates.js" />
+    <Content Include="App\Services\AddService.html" />
+    <Content Include="App\Services\EditService.html" />
     <Content Include="App\Services\Services.html" />
     <Content Include="App\Services\Services.js" />
     <Content Include="App\Service\HelperService.js" />
@@ -138,6 +144,7 @@
     <Compile Include="Core\Standard.cs" />
     <Compile Include="Core\Service.cs" />
     <Compile Include="Core\Rate.cs" />
+    <Compile Include="DataAccess\Helper.cs" />
     <Compile Include="DataAccess\StandardsRepository.cs" />
     <Compile Include="DataAccess\RatesRepository.cs" />
     <Compile Include="DataAccess\ServicesRepository.cs" />
@@ -148,7 +155,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
-    <Content Include="Content\Assets\repair.png" />
     <Content Include="Content\Semantic-UI\components\menu.css" />
     <Content Include="Content\Semantic-UI\components\menu.js" />
     <Content Include="Content\Semantic-UI\components\menu.min.css" />

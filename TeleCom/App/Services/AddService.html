@@ -1,0 +1,10 @@
+﻿<form class="ui form">
+    <h4 class="ui dividing header">Добавить телеком. работу</h4>
+    <div class="field">
+        <label>Наименование</label>
+        <input type="text" ng-model="service.Name" name="Name" placeholder="Наименование">
+    </div>
+    <button ng-click="createNewService()" class="ui green primary button">Сохранить</button>
+    <button ng-click="cancel()" class="ui red basic button">Отмена</button>
+    <div id="space"></div>
+</form>

@@ -38,12 +38,3 @@ input[type="number"] {
 #space {
     padding-bottom: 20px;
 }
-
-#addNomenclatureInRequest {
-    margin-top: 10px;
-}
-
-#nomenclatureInRequestDiv {
-    width: 350px;
-    margin-right: 10px;
-}

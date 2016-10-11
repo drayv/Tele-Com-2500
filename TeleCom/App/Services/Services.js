@@ -15,6 +15,54 @@ angular.module('teleCom.services', ['ngRoute'])
     }
 })
 
+.controller('EditServiceCtrl', ['$scope', 'ServiceFactory', 'HelperService', '$location', '$routeParams',
+     function ($scope, ServiceFactory, HelperService, $location, $routeParams) {
+         $scope.repairer = {};
+
+         HelperService.activateMenu('#services-menu-item');
+
+         $scope.updateService = function () {
+             if ($scope.repairer.Name) {
+                 ServiceFactory.update({
+                     id: $scope.repairer.Id
+                 }, $scope.repairer).$promise.then(function (result) {
+                     $location.path('/services');
+                 });
+             } else {
+                 $('.ui.form').form({ fields: { Name: 'empty' } });
+             }
+         };
+
+         $scope.cancel = function () {
+             $location.path('/services');
+         };
+
+         $scope.repairer = ServiceFactory.show({ id: $routeParams.id });
+     }
+])
+
+.controller('AddServiceCtrl', ['$scope', 'ServicesFactory', 'HelperService', '$location',
+     function ($scope, ServicesFactory, HelperService, $location) {
+         $scope.service = {};
+
+         HelperService.activateMenu('#services-menu-item');
+
+         $scope.createNewService = function () {
+             if ($scope.service.Name) {
+                 ServicesFactory.create($scope.service).$promise.then(function (result) {
+                     $location.path('/services');
+                 });
+             } else {
+                 $('.ui.form').form({ fields: { Name: 'empty' } });
+             }
+         };
+
+         $scope.cancel = function () {
+             $location.path('/services');
+         };
+     }
+])
+
 .controller('ServicesCtrl', ['$scope', 'ServicesFactory', 'ServiceFactory', 'HelperService', '$location', '$filter',
     function ($scope, ServicesFactory, ServiceFactory, HelperService, $location, $filter) {
 

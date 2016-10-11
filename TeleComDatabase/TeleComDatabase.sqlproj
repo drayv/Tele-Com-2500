@@ -14,7 +14,7 @@
     </RootPath>
     <RootNamespace>TeleComDatabase</RootNamespace>
     <AssemblyName>TeleComDatabase</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
+    <ModelCollation>1049,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -23,6 +23,7 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Cyrillic_General_CI_AS</DefaultCollation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -64,5 +65,8 @@
     <Build Include="Rates.sql" />
     <Build Include="FK_Rates_Service.sql" />
     <Build Include="FK_Standards_Service.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Seed.sql" />
   </ItemGroup>
 </Project>

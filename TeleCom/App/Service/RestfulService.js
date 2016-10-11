@@ -20,3 +20,22 @@ services.factory('ServiceFactory', ['$resource',
         });
     }
 ]);
+
+services.factory('RatesFactory', ['$resource',
+    function ($resource) {
+        return $resource('/api/Rates', {}, {
+            query: { method: 'GET', isArray: true },
+            create: { method: 'POST' }
+        });
+    }
+]);
+
+services.factory('RateFactory', ['$resource',
+    function ($resource) {
+        return $resource('/api/Rates/:id', {}, {
+            show: { method: 'GET' },
+            update: { method: 'PUT', params: { id: '@id' } },
+            delete: { method: 'DELETE', params: { id: '@id' } }
+        });
+    }
+]);
