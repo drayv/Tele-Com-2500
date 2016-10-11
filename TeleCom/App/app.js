@@ -5,7 +5,8 @@ angular.module('teleCom', [
   'teleCom.restfulService',
   'teleCom.helpers',
   'teleCom.services',
-  'teleCom.rates'
+  'teleCom.rates',
+  'teleCom.standards'
 ]).
 
 config(['$routeProvider', function ($routeProvider) {

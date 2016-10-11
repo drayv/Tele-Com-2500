@@ -123,6 +123,10 @@
     <Content Include="App\Services\Services.js" />
     <Content Include="App\Service\HelperService.js" />
     <Content Include="App\Service\RestfulService.js" />
+    <Content Include="App\Standards\AddStandard.html" />
+    <Content Include="App\Standards\EditStandard.html" />
+    <Content Include="App\Standards\Standards.html" />
+    <Content Include="App\Standards\Standards.js" />
     <Content Include="Content\Assets\telecom.png" />
     <Content Include="Content\Semantic-UI\components\dropdown.css" />
     <Content Include="Content\Semantic-UI\components\dropdown.js" />

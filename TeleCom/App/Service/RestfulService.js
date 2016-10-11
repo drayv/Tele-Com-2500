@@ -39,3 +39,22 @@ services.factory('RateFactory', ['$resource',
         });
     }
 ]);
+
+services.factory('StandardsFactory', ['$resource',
+    function ($resource) {
+        return $resource('/api/Standards', {}, {
+            query: { method: 'GET', isArray: true },
+            create: { method: 'POST' }
+        });
+    }
+]);
+
+services.factory('StandardFactory', ['$resource',
+    function ($resource) {
+        return $resource('/api/Standards/:id', {}, {
+            show: { method: 'GET' },
+            update: { method: 'PUT', params: { id: '@id' } },
+            delete: { method: 'DELETE', params: { id: '@id' } }
+        });
+    }
+]);

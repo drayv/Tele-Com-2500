@@ -1,0 +1,31 @@
+﻿<form class="ui form">
+    <h4 class="ui dividing header">Добавить норматив</h4>
+
+    <div class="field">
+        <label>Работа</label>
+        <div class="ui fluid search selection dropdown">
+            <input id="service" type="hidden" name="Service" value="{{standard.Service.Id}}">
+            <i class="dropdown icon"></i>
+            <div class="default text">Работа</div>
+            <div class="menu">
+                <div class="item" ng-repeat="service in services" data-value="{{service.Id}}"
+                     ng-click="setService(service.Id)">{{service.Name}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="field">
+        <label>Норматив</label>
+        <textarea rows="5" type="text" ng-model="standard.Name" name="Name" placeholder="Норматив"></textarea>
+    </div>
+
+    <div class="field">
+        <label>Значение</label>
+        <textarea rows="8" type="text" ng-model="standard.Value" name="Value" placeholder="Значение"></textarea>
+    </div>
+
+    <div class="ui error message"></div>
+    <button ng-click="createNewStandard()" class="ui green primary button">Сохранить</button>
+    <button ng-click="cancel()" class="ui red basic button">Отмена</button>
+    <div id="space"></div>
+</form>

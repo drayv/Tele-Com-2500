@@ -100,6 +100,8 @@ angular.module('teleCom.services', ['ngRoute'])
                     return true;
                 } else if (HelperService.searchMatch(item["Name"], $scope.query)) {
                     return true;
+                } else if (HelperService.searchMatch(item["CurAmount"], $scope.query)) {
+                    return true;
                 }
                 return false;
             });
